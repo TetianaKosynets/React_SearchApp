@@ -26,7 +26,22 @@ export default function SearchComponent(props) {
 
 
     return (
-            <div></div>
+            <div>
+                <div>
+                    <input placeholder="Search" onChange={filter} />
+                </div>
+                <div>
+                    <h1>Products</h1>
+                    {search.map(item =>
+                        <ul>
+                            <li>{item.name}</li>
+                            <li>{item.details}</li>
+                            <li>{item.price}</li>
+                            <li>{item.location}</li>
+                        </ul>
+                    )}
+                </div>
+            </div>
         );
            
     }
